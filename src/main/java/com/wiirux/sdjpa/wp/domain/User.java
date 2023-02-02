@@ -2,6 +2,7 @@ package com.wiirux.sdjpa.wp.domain;
 
 import java.sql.Timestamp;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -41,7 +42,8 @@ public class User {
 	@Column(name = "user_status")
 	private Integer status;
 	
-	@Column(name = "display_name")
+	@Basic(optional = false)
+	//@Column(name = "display_name", nullable = false)
 	private String displayName;
 	
 	public Long getId() {
